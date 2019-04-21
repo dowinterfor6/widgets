@@ -1,8 +1,15 @@
 import React from 'react';
 import Clock from './clock';
+import Tabs from './tabs';
 
 class WidgetsWrapper extends React.Component {
   render() {
+    let panes = [
+      { title: 'tab1', content: 'uno'},
+      { title: 'tab2', content: 'dos Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi repellendus dicta perspiciatis ut magni iste excepturi, maiores molestias inventore, eaque eligendi quo aliquam? Sequi in commodi mollitia esse? Est, tenetur.'},
+      { title: 'tab3', content: 'tres Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi repellendus dicta perspiciatis ut magni iste excepturi, maiores molestias inventore, eaque eligendi quo aliquam? Sequi in commodi mollitia esse? Est, tenetur.'}
+    ]
+
     return (
       <>
         <div id="nav-bar">
@@ -18,6 +25,7 @@ class WidgetsWrapper extends React.Component {
           <div id="widgets">
             <Clock />
             <div id="weather-widget">weather is shit</div>
+            <Tabs panes={panes} />
           </div>
         </section>
       </>

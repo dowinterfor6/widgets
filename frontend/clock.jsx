@@ -1,6 +1,6 @@
 import React from 'react';
 
-class Clock extends React.Component {
+export default class Clock extends React.Component {
   constructor() {
     super();
     this.state = {
@@ -36,17 +36,17 @@ class Clock extends React.Component {
     return (
       <div id="clock-widget">
         <h2>Clock</h2>
-        <div id="clock-time">
-          <p>Time:</p>
-          <p> {timeDisplay} {timeZone}</p>
-        </div>
-        <div id="clock-date">
-          <p>Date:</p>
-          <p> {this.state.time.toDateString()}</p>
+        <div id="clock-display">
+          <div id="clock-time">
+            <p>Time:</p>
+            <p> {timeDisplay} {timeZone}</p>
+          </div>
+          <div id="clock-date">
+            <p>Date:</p>
+            <p> {this.state.time.toDateString()}</p>
+          </div>
         </div>
       </div>
     )
   }
 }
-
-export default Clock;
