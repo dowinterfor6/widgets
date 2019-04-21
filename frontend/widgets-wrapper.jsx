@@ -1,6 +1,7 @@
 import React from 'react';
 import Clock from './clock';
 import Tabs from './tabs';
+import Weather from './weather';
 
 class WidgetsWrapper extends React.Component {
   render() {
@@ -24,7 +25,7 @@ class WidgetsWrapper extends React.Component {
           </aside>
           <div id="widgets">
             <Clock />
-            <div id="weather-widget">weather is shit</div>
+            <Weather />
             <Tabs panes={panes} />
           </div>
         </section>

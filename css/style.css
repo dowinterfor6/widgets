@@ -54,7 +54,6 @@ p {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1em);
-  justify-self: flex-end;
 }
 
 #clock-time {
@@ -81,7 +80,7 @@ p {
 }
 
 #unit-tab-header {
-  min-height: 1em;
+  height: 100%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   user-select: none;
@@ -119,7 +118,7 @@ p {
 }
 
 #tabs-content article {
-  padding: 10px;
+  padding: 0px 10px;
 }
 
 #clock-widget, #tabs-widget, #weather-widget{
