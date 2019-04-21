@@ -1,3 +1,7 @@
+:root {
+  --test: black;
+}
+
 body {
   font-family: 'Lato', sans-serif;
 }
@@ -76,15 +80,46 @@ p {
   justify-self: flex-end;
 }
 
-#tab-header {
+#unit-tab-header {
   min-height: 1em;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  justify-items: center;
+  user-select: none;
 }
 
-#tab-content {
+#unit-tab-header li {
+  text-align: center;
+  width: auto;
+  border: 1px solid black;
+  border-top-left-radius: 7px;
+  border-top-right-radius: 7px;
+  cursor: pointer;
+}
+
+#unit-tab-header li:hover {
+  background-color: black;
+  color: white;
+}
+
+#unit-tab-header li.active {
+  font-weight: bold;
+  border-bottom: none;
+}
+
+#unit-tab-header li.active:hover {
+  background-color: inherit;
+  color: inherit;
+  cursor: default;
+}
+
+#tabs-content {
   overflow: auto;
+  border: 1px solid black;
+  border-top: none;
+}
+
+#tabs-content article {
+  padding: 10px;
 }
 
 #clock-widget, #tabs-widget, #weather-widget{

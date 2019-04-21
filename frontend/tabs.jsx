@@ -54,7 +54,7 @@ class Headers extends React.Component {
     });
 
     return (
-      <ul id='tab-header'>
+      <ul id='unit-tab-header'>
         {headers}
       </ul>
     );
