@@ -14,6 +14,10 @@ class Clock extends React.Component {
     this.handle = setInterval(this.tick, 1000);
   }
 
+  componentWillUnmount() {
+    clearInterval(this.handle);
+  }
+
   tick() {
     this.setState({time: new Date()});
   }
@@ -32,8 +36,14 @@ class Clock extends React.Component {
     return (
       <div id="clock-widget">
         <h2>Clock</h2>
-        <p>Time: {timeDisplay} {timeZone}</p>
-        <p>Date: {this.state.time.toDateString()}</p>
+        <div id="clock-time">
+          <p>Time:</p>
+          <p> {timeDisplay} {timeZone}</p>
+        </div>
+        <div id="clock-date">
+          <p>Date:</p>
+          <p> {this.state.time.toDateString()}</p>
+        </div>
       </div>
     )
   }

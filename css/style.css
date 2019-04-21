@@ -22,23 +22,30 @@ p {
 
 #main-content {
   margin-top: 2%;
-  /* display: flex; */
-  /* justify-content: center;
-  align-content: flex-start; */
-  display: grid;
-  grid-template-columns: auto auto;
-  grid-gap: 2%;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  /* display: grid;
+  grid-template-columns: 400px 400px;
+  grid-gap: 2%; */
 }
 
 #side-bar {
-  /* margin-right: 2%; */
+  margin-right: 2%;
 }
 
 #widgets {
-  width: 60%;
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: 400px 400px;
   grid-gap: 2%;
+}
+
+#clock-time, #clock-date {
+  display: flex;
+  justify-content: space-between;
 }
 
 #clock-widget{
